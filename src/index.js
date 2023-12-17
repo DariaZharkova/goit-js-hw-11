@@ -24,10 +24,8 @@ form.addEventListener('submit', onSubmit);
 async function onSubmit(evt) {
   evt.preventDefault();
   gallery.innerHTML = '';
-
   const { searchQuery } = evt.currentTarget.elements;
   searchPhoto = searchQuery.value.toLowerCase().trim();
-
   if (searchPhoto === '') {
     Notiflix.Notify.info('Please, enter parameters for search');
     return;
