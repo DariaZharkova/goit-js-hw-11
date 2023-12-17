@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export async function fetchGallery(query, page = 1) {
+export async function fetchGallery(query, page) {
   const BASE_URL = 'https://pixabay.com/api/';
   const queryParams = new URLSearchParams({
     key: '41307406-a71d6749c34589205bbec157b',
