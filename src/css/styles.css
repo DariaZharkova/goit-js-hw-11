@@ -86,10 +86,6 @@ img {
   padding: 10px;
 }
 
-.load-more-hidden {
-  display: none;
-}
-
 .load-more {
   display: block;
   width: 200px;
