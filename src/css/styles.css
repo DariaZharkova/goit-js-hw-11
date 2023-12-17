@@ -1,17 +1,88 @@
+body {
+  background-color: lightcyan;
+  padding-top: 120px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+.search-form {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background-color: rgb(144, 238, 144, 0.8);
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  width: 100%;
+  padding: 25px 40px;
+  margin-bottom: 10px;
+}
+
+input {
+  width: 300px;
+  height: 40px;
+  padding: 8px 16px;
+
+  border-radius: 4px;
+  border: 1px solid white;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  outline: transparent;
+}
+
+.btn-submit {
+  width: 100px;
+  height: 40px;
+  padding: 8px 16px;
+
+  border-radius: 4px;
+  border: 1px solid white;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  outline: transparent;
+  cursor: pointer;
+}
+
 img {
   display: block;
   max-width: 100%;
-  height: auto;
+  height: 80%;
+  overflow: hidden;
+  object-fit: cover;
 }
 
 .gallery {
+  padding: 20px;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  justify-content: space-around;
 }
 
 .photo-card {
-  flex-basis: calc((100% - 20px * 3) / 4);
+  max-width: 360px;
+  background-color: rgb(255, 255, 255, 0.5);
+}
+
+.photo-card:hover,
+.photo-card:focus {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  padding: 10px;
 }
 
 .load-more-hidden {
@@ -19,16 +90,18 @@ img {
 }
 
 .load-more {
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 1.2em;
-  font-weight: bold;
-  text-align: center;
-  text-transform: uppercase;
-  border: none;
-  border-radius: 5px;
-  background-color: #007bff;
-  color: #fff;
+  display: block;
+  width: 200px;
+  height: 40px;
+  padding: 8px 16px;
+  margin: auto;
+
+  border-radius: 4px;
+  border: 1px solid white;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  background-color: rgb(144, 238, 144);
+  outline: transparent;
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+  font-size: 16;
+  font-weight: 500;
 }

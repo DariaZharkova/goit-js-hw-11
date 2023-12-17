@@ -28,6 +28,11 @@ async function onSubmit(evt) {
   const { searchQuery } = evt.currentTarget.elements;
   searchPhoto = searchQuery.value.toLowerCase().trim();
 
+  if (searchPhoto === '') {
+    Notiflix.Notify.info('Please, enter parameters for search');
+    return;
+  }
+
   try {
     const { hits, totalHits } = await fetchGallery(searchPhoto);
     totalPages = Math.ceil(totalHits / 40);
