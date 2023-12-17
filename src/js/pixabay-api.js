@@ -12,7 +12,5 @@ export async function fetchGallery(query, page = 1) {
     per_page: 40,
   });
   const response = await axios.get(`${BASE_URL}?${queryParams}`);
-  console.log(response.data);
   return response.data;
 }
-fetchGallery();

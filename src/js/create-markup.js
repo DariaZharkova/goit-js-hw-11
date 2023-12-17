@@ -11,7 +11,7 @@ export function createMarkup(arr) {
         downloads,
       }) => `
         <div class="photo-card">
-        <a class="large_image" href ="${largeImageURL}">
+        <a class="gallery__link" href ="${largeImageURL}">
   <img src="${webformatURL}" alt="${tags}" loading="lazy" /></a>
   <div class="info">
     <p class="info-item">
